@@ -1,0 +1,122 @@
+
+
+<div> 
+    <!-- Modal -->
+        <div class="modal fade" id="encabezadoForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="encabezadoForm">Agregar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+    
+                        <form [formGroup]="encabezadoForm" (ngSubmit)="onSubmit()">
+                            <input type="hidden" name="id" formControlName="id">
+                            
+                            <div class="row mb-3">
+                            <label for="backImage" class="col-sm-2 col-form-label">Imagen Portada</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="backImage" formControlName="backImage"  class="form-control" required>
+                                </div>
+                            </div>
+    
+                  <div class="row mb-3">
+                            <label for="imgCV" class="col-sm-2 col-form-label">Imagen CV</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="imgCV" formControlName="imgCV"  class="form-control" required>
+                                </div>
+                            </div>
+    
+                            <div class="row mb-3">
+                            <label for="name" class="col-sm-2 col-form-label">Nombre Completo</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="name" formControlName="name" class="form-control" required>
+                            </div>
+                            </div>
+                
+                            <div class="row mb-3">
+                            <label for="posicion" class="col-sm-2 col-form-label">Posicion</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="position" formControlName="position" class="form-control" required>
+                            </div>
+                            </div>
+                
+                            <div class="row mb-3">
+                            <label for="ubication" class="col-sm-2 col-form-label">Ubicacion</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="ubication" formControlName="ubication" class="formcontrol" required>
+                            </div>
+                            </div>
+    
+                            <div class="row mb-3">
+                                <label for="imgCompany" class="col-sm-2 col-form-label">Imagen Empresa</label>
+                                <div class="col-sm-10">
+                                <input type="text" name="imgCompany" formControlName="imgCompany" class="form-control" required>
+                                </div>
+                            </div>
+                
+                            <div class="row mb-3">
+                            <label for="nameCompany" class="col-sm-2 col-form-label">Nombre Empresa</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="nameCompany" formControlName="nameCompany"  class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="imgSchool" class="col-sm-2 col-form-label">Imagen Universidad</label>
+                                <div class="col-sm-10">
+                                <input type="text" name="imgSchool" formControlName="imgSchool" class="form-control" required>
+                                </div>
+                            </div>
+                
+                            <div class="row mb-3">
+                            <label for="nameSchool" class="col-sm-2 col-form-label">Nombre Universidad</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="nameSchool" formControlName="nameSchool"  class="form-control" required>
+                                </div>
+                            </div>
+                        
+                            <div class="text-center">
+                                <button type="button" class="btn btn-secondary me-4" data-bs-dismiss="modal" >Cerrar</button>
+                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div id="first-card" class="card mat-card" *ngFor="let encabezado of encabezadoList; let i = index">
+        <div id="profile-background" class="col-12">
+            <img [src]="encabezado.backImage" alt="imagen de fondo">
+        </div>
+        <div id="info" style="padding: 16px;">    
+            <div id="info-img"> 
+                <img class="profile-image" [src]="encabezado.imgCV" alt="foto-personal">
+                <button  *ngIf="isUserLogged"  class="btn btn-right" data-bs-toggle="modal" data-bs-target="#encabezadoForm" (click)="onEditEncabezado(i)">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>  
+            </div>
+            <div id="info-data">
+                <div>
+                    <h1>{{encabezado.name}}</h1>
+                    <div id="info-company">{{encabezado.position}}</div>
+                    <div id="info-contact">
+                        <span>{{encabezado.ubication}}</span>
+                        <span><a href="#">Informacion de contacto</a></span>
+                    </div>
+                </div>
+                <ul id="info-details">
+                    <li><a href="#">
+                        <img [src]="encabezado.imgCompany" alt="">
+                        <h2>{{encabezado.nameCompany}}</h2>
+                    </a></li>
+                    <li><a href="#">
+                        <img [src]="encabezado.imgSchool" alt="">
+                        <h2>{{encabezado.nameSchool}}</h2>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

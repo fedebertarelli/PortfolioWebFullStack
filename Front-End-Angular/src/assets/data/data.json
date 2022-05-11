@@ -1,0 +1,94 @@
+{
+    "name" : "Federico A. Bertarelli",
+    "backImage": "/assets/img/fondo.jpg",
+    "image": "/assets/img/foto.carnet.1.jpg",
+    "position" : "Jefe de administración Hospital Misericordia",
+    "company" : {
+      "name": "Hospital Misericordia",
+      "img": "/assets/img/ministerio.jpg",
+      "url" : "#"
+    },
+    "school": {
+      "name": "Universidad Nacional de Córdoba",
+      "img": "/assets/img/logo_fce.png",
+      "url": "#"
+    },
+    "ubication" : "Córdoba (Argentina) ",
+    "about": "Licienciado en admisnitración, estoy a cargo de la administración del Hosptial Misericordia y actualmente me encuentro estudiando programación Full Stack.",
+    "experience": [
+      {
+        "position": "Jefe de serivio administración",
+        "company": "Hospital Misericordia",
+        "img": "/assets/img/ministerio.jpg",
+        "start": "nov 2018",
+        "end": "actualidad"
+      },
+     {
+        "position": "Tesoreria y Compras",
+        "company": "Hospital de Niños",
+        "img": "/assets/img/ministerio.jpg",
+        "start": "sep 2015",
+        "end": "nov 2018"
+      },
+     {
+        "position": "Tesoreria y Compras",
+        "company": "Hospital de Transito",
+        "img": "/assets/img/ministerio.jpg",
+        "start": "ago 2011",
+        "end": "sep 2015"
+      },
+     {
+        "position": "Atencion Telefonica al Cliente",
+        "company": "Allus",
+        "img": "/assets/img/allus.jpg",
+        "start": "sep 2009",
+        "end": "dic 2019"
+      }
+
+    ],
+    "education": [
+      {
+        "school": "DePcSuite",
+        "title": "Programador Web Full Stack",
+        "img": "/assets/img/photo.png",
+        "start": "oct 2020",
+        "end": "abr 2021"
+      },
+      {
+        "school": "Universidad Nacional de Córdoba",
+        "title": "Lic en Administración",
+        "img": "/assets/img/logo_fce.png",
+        "start": "mar 2008",
+        "end": "mar 2014"
+      }
+    ],
+    "aptitudes": [
+      {
+        "name": "Resolución de problemas",
+        "progress": 75
+      },
+      {
+        "name": "Diseño de Sistemas",
+	"progress": 50     
+      }
+    ],
+    "achivements": [
+      {
+        "name": "AMB CLIENTES",
+	"descripcion1" : "Alta, baja y modificación de un registro de clientes.",
+	"descripcion2" : "Realizado en HTML, CSS, PHP, Bootstrap y Json."
+      },
+      {
+         "name": "SISTEMA DE GESTIÓN DE VENTAS",
+	"descripcion1" : "Sistema de gestión de clientes, productos y ventas. Realizado en",
+	"descripcion2" : "HTML, CSS, PHP, MVC, Bootstrap, Js, Ajax, jQuery y MySQL de base de datos."
+      },
+     {
+         "name": "SISTEMA DE ADMINISTRACIÓN",
+	"descripcion1" : "Proyecto Full Stack desarrollado en PHP, Laravel, Javascript, jQuery, AJAX, HTML, CSS,Mercadopago",
+	"descripcion2" : "con panel administrador, gestor de usuarios, modulo de permisos y funcionalidades a fines."
+      }
+    ]
+  
+  
+}

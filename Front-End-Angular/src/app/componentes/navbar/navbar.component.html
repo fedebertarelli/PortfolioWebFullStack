@@ -1,0 +1,29 @@
+<div> 
+
+
+    <nav >
+        <div class="container-fluid" *ngFor="let redes of redesList">
+            <div class="row">
+                <div class="col-9">
+                    <h6 style="margin: 0.5em;">{{redes.nombre}}</h6>
+                </div>
+                <div class="col-3">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                        <a class="nav-link active" target="_blank" aria-current="page" href="{{redes.facebook}}"><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="{{redes.instagram}}"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="{{redes.twitter}}"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                        <button *ngIf="!isUserLogged" class="btn" type="button" style="color : white" (click)="login()">Login</button>
+                        <button *ngIf="isUserLogged" class="btn" type="button" style="color : white" (click)="logout()">Logout</button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
